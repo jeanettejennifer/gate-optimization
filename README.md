@@ -1,1 +1,1 @@
-# gate-optimization
+# Qiskit-Gate-Optimization
