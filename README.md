@@ -12,22 +12,22 @@ The focus is on optimizing the width of a GaussianSquare pulse to implement an X
 ## Main Challenges
 
 - Choosing appropriate optimization methods and understanding why certain methods work better than others.
-- Understanding why optimization of parameters such as sigma (and beta for the raised Gaussian) did not converge as reliably as width.
-- Implementing a ScalableSymbolicPulse version of the raised Gaussian pulse.
+- Figuring out why optimization of parameters such as sigma (and beta for the raised Gaussian) did not converge as reliably as width for our system.
+- Learning how to implement arbitrary pulse envelopes compatible with JAX, starting from their mathematical definitions
 
 ## What I Found Most Interesting
 
-- Learning to use Qiskit Dynamics for pulse optimization and seeing clear progress over a relatively short time. Going from limited knowledge of the library to defining and optimizing my own pulse parameters was especially rewarding.
-- Discovering how much freedom there is in pulse optimization: in principle almost any pulse shape can be defined and optimized, with many possible optimization methods. Implementing the raised cosine pulse was particularly beneficial for learning how to work with parametrized pulse envelopes.
-- Observing how different optimization methods behave in practice, especially why some converge reliably while others fail. I still do not know the full answer to this question, but it strongly motivated me to learn more about optimization theory.
+- Discovering how much freedom there is in pulse optimization: in principle almost any pulse shape can be defined and optimized, with many possible optimization methods. 
+- Observing how different optimization methods behave in practice, especially why some converge reliably while others fail. It motivates me to learn more about optimization theory.
+- Learning how to work with qiskit dynamics!
 
 ## Future Improvements
 
-- Extending the qubit model to include higher energy levels to capture more realistic dynamics and increased sensitivity to pulse parameters. In this regime, amplitude would become an interesting optimization parameter, and pulse fidelity would depend more strongly on properties such as smoothness, not just width.
-- Expanding pulse customization by adding more pulse shapes (i.e., defining functions that generate ScalableSymbolicPulses for specific envelopes)
-- improve how the code handles different optimization methods.
-- Improve my understanding of different optimization methods in order to select the most appropriate approach for a specific control problem.
+- Extending the qubit model to include higher energy levels to capture more realistic dynamics and increased sensitivity to pulse parameters. In this regime, amplitude would become an interesting optimization parameter, and pulse fidelity would depend more strongly on parameters such as sigma, not just width.
+- Improve how the code handles different optimization methods. Currently it uses the code aimed for gradient-based optimization also for the Nelder-Mead method that does not utilize gradients.
 - Extending the code to to support optimization of other single-qubit gates.
+- Expanding pulse customization by adding more supported pulse shapes (i.e., defining functions that generate ScalableSymbolicPulses for specific envelopes)
+
   
 ## Installation Instructions
 
