@@ -19,7 +19,8 @@ The focus is on optimizing the width of a GaussianSquare pulse to implement an X
 
 - Discovering how much freedom there is in pulse optimization: in principle almost any pulse shape can be defined and optimized, with many possible optimization methods. 
 - Observing how different optimization methods behave in practice, especially why some converge reliably while others fail. It motivates me to learn more about optimization theory.
-- Learning how to work with qiskit dynamics!
+- Overall, learning how to work with Qiskit dynamics
+
 
 ## Future Improvements
 
